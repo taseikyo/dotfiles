@@ -1,0 +1,21 @@
+[
+	{
+        "keys": ["ctrl+alt+h"], "command": "sublime_tmpl",
+        "args": {"type": "html"}, "context": [{"key": "sublime_tmpl.html"}]
+    }
+    ,{
+        "keys": ["ctrl+shift+c"], "command": "sublime_tmpl",
+        "args": {"type": "c++"}, "context": [{"key": "sublime_tmpl.cpp"}]
+    }
+    ,{
+        "keys": ["ctrl+alt+p"], "command": "sublime_tmpl",
+        "args": {"type": "python"}, "context": [{"key": "sublime_tmpl.python"}]
+    }
+    ,{
+        "keys": ["ctrl+shift+r"], "command": "sublime_tmpl",
+        "args": {"type": "markdown"}, "context": [{"key": "sublime_tmpl.markdown"}]
+    },{
+        "keys": ["ctrl+shift+g"], "command": "sublime_tmpl",
+        "args": {"type": "go"}, "context": [{"key": "sublime_tmpl.go"}]
+    }
+]

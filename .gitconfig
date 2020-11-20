@@ -1,0 +1,15 @@
+[user]
+	name = Lewis Tian
+	email = taseikyo@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+[core]
+	quotepath = false
+[http]
+	proxy = http://127.0.0.1:7890
+[https]
+	proxy = http://127.0.0.1:7890
+[push]
+	default = current

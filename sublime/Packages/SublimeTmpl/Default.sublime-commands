@@ -1,0 +1,22 @@
+[
+    {
+        "caption": "Tmpl: Create project-specific", "command": "sublime_tmpl",
+        "args": {"type": "project"}
+    },
+    {
+        "caption": "Tmpl: Create html", "command": "sublime_tmpl",
+        "args": {"type": "html"}
+    },
+    {
+        "caption": "Tmpl: Create c++", "command": "sublime_tmpl",
+        "args": {"type": "c++"}
+    },
+    {
+        "caption": "Tmpl: Create python", "command": "sublime_tmpl",
+        "args": {"type": "python"}
+    },
+    {
+        "caption": "Tmpl: Create markdown", "command": "sublime_tmpl",
+        "args": {"type": "markdown"}
+    }
+]
