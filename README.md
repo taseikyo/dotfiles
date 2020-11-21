@@ -12,6 +12,7 @@
 
 - [myrc](#myrc)
 - [git](#git)
+- [python](#python)
 - [sublime](#sublime)
 - [terminal](#terminal)
 - [vim](#vim)
@@ -32,6 +33,12 @@ chmod +x remove_duplicate_cmds.py
 ## git
 
 由于常用的 git 就那么几个 add/commit/push 命令（大雾），基本的 alias 就 co/br 够用了，配置文件在 ".gitconfig"，另外还有其他的 gs/gl 在 ".myrc" 配置文件中。
+
+## python
+
+主要是配置 pip，由于某些原因，使用 pip 安装第三方库很慢，需要我们配置国内镜像，如 Ubuntu 一样，我还是习惯清华源，你也可以使用阿里源或者豆瓣源等等，在于个人喜好，配置文件在 Windows 下位于 "C:/Users/taseikyo/pip/pip.ini"，Linux 下位于 "/home/taseikyo/.pip/pip.conf"，内容一样，位置不同，我将其放在 "python/pip.ini"。
+
+第二个是常用的三方库，都是我个人常用的（通过 `pip list > requirements.txt` 导出的），后面直接保存到本地然后 pip 安装即可。
 
 ## sublime
 
