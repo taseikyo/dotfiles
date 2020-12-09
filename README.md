@@ -58,6 +58,8 @@ terminal 的相关配置文件在另一个 [taseikyo/oh-my-terminal](https://git
 
 vs code 主要配置在于 "Remote - SSH" 这个插件，它可以直接服务器，无论是直连节点，还是需要中间节点跳转的节点，在自己电脑上它的配置文件为 "C:/Users/taseikyo/.ssh/config"，我将其提取出来，现在是 "vscode/config"。
 
+另外一个重要的配置文件是 settings.json，编辑它的快捷键是 `ctrl+shift+p` 输入 "open setting" 然后点 "Open Settings (JSON)"，就会弹出编辑的窗口，因为用 vscode 也不多，所以就一些简单的配置，见 "vscode/settings.json"，有些路径需要手动调整。
+
 ## license
 
 Copyright (c) 2020 Lewis Tian. Licensed under the MIT license.
