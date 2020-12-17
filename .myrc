@@ -41,7 +41,7 @@ alias h3='history 30'
 
 alias l.='ls -d .* --color=auto'
 alias ls='ls --color=auto'
-alias ll='ls -hla'
+alias ll="ls -hla --time-style '+%Y/%m/%d %H:%M:%S'"
 alias l=ll
 
 ## Install & Update utilties
@@ -53,4 +53,11 @@ alias sau='sudo apt update'
 
 ## Get details of a process
 
-alias paux='ps aux | grep'
+alias paux='ps aux | grep -v grep | grep'
+
+## Virsh commands
+
+alias svl='sudo virsh list --all'
+alias svc='sudo virsh console'
+alias svsd='sudo virsh shutdown'
+alias svst='sudo virsh start'
