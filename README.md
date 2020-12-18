@@ -17,6 +17,7 @@
 - [terminal](#terminal)
 - [vim](#vim)
 - [vs code](#vs-code)
+- [wsl](#wsl)
 
 ## myrc
 
@@ -59,6 +60,73 @@ terminal 的相关配置文件在另一个 [taseikyo/oh-my-terminal](https://git
 vs code 主要配置在于 "Remote - SSH" 这个插件，它可以直接服务器，无论是直连节点，还是需要中间节点跳转的节点，在自己电脑上它的配置文件为 "C:/Users/taseikyo/.ssh/config"，我将其提取出来，现在是 "vscode/config"。
 
 另外一个重要的配置文件是 settings.json，编辑它的快捷键是 `ctrl+shift+p` 输入 "open setting" 然后点 "Open Settings (JSON)"，就会弹出编辑的窗口，因为用 vscode 也不多，所以就一些简单的配置，见 "vscode/settings.json"，有些路径需要手动调整。
+
+## wsl
+
+在 [taseikyo/oh-my-terminal](https://github.com/taseikyo/oh-my-terminal) 中我总结了安装 wsl2 和使用 oh-my-zsh 的步骤。
+
+有个问题是 Windows 文件的权限问题（一搜一大把），在 wsl 中，它们全部被挂在 /mount 目录下，权限都是 777（rwxrwxrwx），即使你使用 chmod 也没用，比如：
+
+```Bash
+tian % cd /mnt/f/GitHub/oh-my-terminal
+oh-my-terminal [master] % ls
+LICENSE  README.md  images  settings.json
+oh-my-terminal [master] % ll
+total 28K
+drwxrwxrwx 1 tian tian 4.0K Dec 18 09:33 .
+drwxrwxrwx 1 tian tian 4.0K Dec 18 09:33 ..
+-rwxrwxrwx 1 tian tian  252 Dec 18 09:33 .bashrc
+drwxrwxrwx 1 tian tian 4.0K Dec 18 09:45 .git
+-rwxrwxrwx 1 tian tian  937 Dec 18 09:33 .myrc
+-rwxrwxrwx 1 tian tian   98 Dec 18 09:33 .zshrc
+-rwxrwxrwx 1 tian tian 1.1K Dec 18 09:33 LICENSE
+-rwxrwxrwx 1 tian tian  10K Dec 18 09:33 README.md
+drwxrwxrwx 1 tian tian 4.0K Dec 18 09:33 images
+-rwxrwxrwx 1 tian tian 7.0K Dec 18 09:33 settings.json
+```
+
+解决方法是新建配置文件（/etc/wsl.conf），写入下面的配置（来自 https://superuser.com/a/1295442 的回答），修改完，重启就正常了。
+
+另外我已经将其放在 "wsl/wsl.conf"，直接下载使用即可。
+
+> /etc/wsl.conf
+
+```
+[automount]
+enabled=true
+options=metadata,uid=1000,gid=1000,umask=022
+```
+
+另外就是使用 gs（git status，见上面 .myrc 配置文件） 显示所有文件修改的问题，就是 Windows 和 Linux 换行方式区别导致的：Windows 中使用的文本换行方式是 CRLF，Linux 中使用的文本换行方式是 LF，然后 wsl 是 Linux 环境，默认使用 LF 换行方式，所以 git 会自动将代码当中与 wsl 系统不同的换行方式转化成 wsl 换行方式，从而状态发生变动。
+
+```Bash
+oh-my-terminal [master] % gs
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   .bashrc
+        modified:   .myrc
+        modified:   .zshrc
+        modified:   LICENSE
+        modified:   README.md
+        modified:   settings.json
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+所以我们禁止 wsl 自动转换文本换行模式即可（在 Windows 中同样敲下面命令，否则 Windows 中也会出现一堆文件显示修改）：
+
+```Bash
+oh-my-terminal [master] % git config --global core.autocrlf true
+oh-my-terminal [master] % gs
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+```
 
 ## license
 
