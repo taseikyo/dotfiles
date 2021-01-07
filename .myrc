@@ -1,6 +1,14 @@
+# ~/.myrc: executed by bash, zsh or Xsh.
+
 ~/remove_duplicate_cmds.py
 
+## Windows
+
+alias e='explorer.exe .'
+export LESSCHARSET=utf-8
+
 ## Golang
+
 export GOPATH=/mnt/d/Codes/go
 export GOCACHE=$GOPATH/go-build
 export GOBIN=$GOPATH/bin
