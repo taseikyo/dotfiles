@@ -1,0 +1,3 @@
+50 23 * * * . /home/tian/.myrc;cd $TCD;./foo.sh&
+30 2 * * * . /home/tian/.myrc;cd $TCD;./helper.sh kill
+35 2 * * * . /home/tian/.myrc;cd $TCD/record_video;./extract_merge.py;cd ..;./helper.sh tar

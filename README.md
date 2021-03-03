@@ -10,6 +10,7 @@
 
 ## Table of Contents
 
+- [crontab](#crontab)
 - [myrc](#myrc)
 - [git](#git)
 - [python](#python)
@@ -19,9 +20,13 @@
 - [vs code](#vs-code)
 - [wsl](#wsl)
 
+## crontab
+
+定义任务是一个很好用的功能，只需要写好对应的 Shell 脚本就可以免去手动执行的麻烦。我将一部分的定时任务导出了，放在 "linux/crontab" 文件中。
+
 ## myrc
 
-将自定义的 alias 和环境变量提取出来放在 ".myrc" 中，这样只需要加一行 `. ~/.myrc` 在 zsh/bash/xsh 的配置文件中即可共享使用，不需要在每个 xsh 中都配置一遍，方便快捷。
+将自定义的 alias 和环境变量提取出来放在 "linux/.myrc" 中，这样只需要加一行 `. ~/.myrc` 在 zsh/bash/xsh 的配置文件中即可共享使用，不需要在每个 xsh 中都配置一遍，方便快捷。
 
 使用前记得下载 remove_duplicate_cmds.py 脚本到 home 目录：
 
@@ -33,7 +38,7 @@ chmod +x remove_duplicate_cmds.py
 
 ## git
 
-由于常用的 git 就那么几个 add/commit/push 命令（大雾），基本的 alias 就 co/br 够用了，配置文件在 ".gitconfig"，另外还有其他的 gs/gl 在 ".myrc" 配置文件中。
+由于常用的 git 就那么几个 add/commit/push 命令（大雾），基本的 alias 就 co/br 够用了，配置文件在 "git/.gitconfig"，另外还有其他的 gs/gl 在 "linux/.myrc" 配置文件中。
 
 ## python
 
