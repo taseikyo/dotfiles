@@ -1,0 +1,154 @@
+/*
+ * @Author: Lewis Tian
+ * @Date: 2018-11-04 17:19:27
+ * @FilePath: c:\Users\tian\AppData\Roaming\Code\User\settings.json
+ */
+{
+    "editor.fontSize": 15,
+    "editor.wordWrap": "on",
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.cursorStyle": "line-thin",
+    
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Monokai",
+
+    "window.zoomLevel": 0,
+
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk",
+        // "*.gz",
+        "*.nav",
+        "*.snm"
+    ],
+    "latex-workshop.view.pdf.viewer": "external",
+    "latex-workshop.view.pdf.external.viewer.command": "D:/Programs/SumatraPDF/SumatraPDF.exe",
+    "latex-workshop.view.pdf.external.synctex.command": "D:/Program Files/SumatraPDF/SumatraPDF.exe",
+    "latex-workshop.view.pdf.external.synctex.args": [
+      "-forward-search",
+      "%TEX%",
+      "%LINE%",
+      "-reuse-instance",
+      "-inverse-search",
+      "\"D:/Programs/Microsoft VS Code/Code.exe\" \"D:/Programs/Microsoft VS Code/resources/app/out/cli.js\" -r -g \"%f:%l\"",
+      "%PDF%",
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "xelatex",
+            "tools": [
+              "xelatex",
+              "xelatex"
+            ]
+        },
+        {
+            "name": "xelatexb",
+            "tools": [
+              "xelatex",
+              "bibtex",
+              "xelatex",
+              "xelatex"
+            ]
+        },
+        {
+          "name": "latexmk",
+          "tools": [
+            "latexmk"
+          ]
+        },
+        {
+          "name": "pdflatex -> bibtex -> pdflatex*2",
+          "tools": [
+            "pdflatex",
+            "bibtex",
+            "pdflatex",
+            "pdflatex"
+          ]
+        }
+      ],
+      "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+          "name": "latexmk",
+          "command": "latexmk",
+          "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "%DOC%"
+          ]
+        },
+        {
+          "name": "pdflatex",
+          "command": "pdflatex",
+          "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+          ]
+        },
+        {
+          "name": "bibtex",
+          "command": "bibtex",
+          "args": [
+            "%DOCFILE%"
+          ]
+        }
+    ],
+    "latex-workshop.latex.clean.subfolder.enabled": true,
+    
+    "prettier.tabWidth": 4,
+
+    "git.ignoreLegacyWarning": true,
+    
+    "C_Cpp.updateChannel": "Insiders",
+    "C_Cpp.clang_format_fallbackStyle": "{BasedOnStyle: Google, IndentWidth: 4}",
+
+    "python.formatting.blackPath": "d:/Programs/Scoop/apps/python/current/Scripts/black",
+    "python.pythonPath": "D:/Programs/Scoop/shims/python.exe",
+    "python.linting.flake8Enabled": true,
+    
+    "go.autocompleteUnimportedPackages": true,
+    "go.gocodePackageLookupMode": "go",
+    "go.gotoSymbol.includeImports": true,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.inferGopath": true,
+    "go.gopath": "F:/Codes/Go",
+    "go.gotoSymbol.includeGoroot": true,
+    "go.formatTool": "gofmt",
+    "go.useLanguageServer": true,
+    
+    "terminal.integrated.fontFamily": "Microsoft YaHei Mono",
+}
