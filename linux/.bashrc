@@ -5,6 +5,4 @@
  
 # original .bashrc content end...
 
-if [ -f ~/.myrc ]; then
-	. ~/.myrc
-fi
+[[ -f ~/.myrc ]] && source ~/.myrc
