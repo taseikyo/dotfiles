@@ -16,6 +16,7 @@
 - [python](#python)
 - [sublime](#sublime)
 - [terminal](#terminal)
+- [typora](#typora)
 - [vim](#vim)
 - [vs code](#vs-code)
 - [wsl](#wsl)
@@ -55,6 +56,10 @@ chmod +x remove_duplicate_cmds.py
 terminal 的相关配置文件在另一个 [taseikyo/oh-my-terminal](https://github.com/taseikyo/oh-my-terminal) repo，此 repo 包含 terminal+wsl2 的相关配置，就不迁移过来了，有需要直接切过去看就是。
 
 ![](images/terminal.png)
+
+## typora
+
+今天（2021/03/29）才发现 typora 可以自定义快捷键，比我自己写的 sublime 扩展更方便、更精细（主要是不熟悉它那个类），比如可以区分代码和代码块，公式和内联公式。于是将熟悉的快捷键迁移过去了（Ctrl+1 - Ctrl+7），并加了对应的细化区分，具体配置看 "typora/conf.user.json"
 
 ## vim
 
