@@ -51,6 +51,8 @@ chmod +x remove_duplicate_cmds.py
 
 用了好多年的 sublime，现在已经完全习惯了，即使现在 vs code 有很多特性它没有，但是我还是离不开 sublime。特别是 SublimeTmpl 这个插件，"ctrl+alt+p" 新建 py 文件，"ctrl+shift+c" 新建 c++ 文件，"ctrl+shift+r" 新建 md 文件，而且配置好文件头，这个功能就很棒，相关配置文件放在 sublime 文件夹下。
 
+添加了用户自定义的设置，比如换行设置成 unix 格式，再也不会出现用 sublime 修改 shell 脚本后在 wsl 中执行报错的问题 -> "Packages/User/Preferences.sublime-settings"
+
 ## terminal
 
 terminal 的相关配置文件在另一个 [taseikyo/oh-my-terminal](https://github.com/taseikyo/oh-my-terminal) repo，此 repo 包含 terminal+wsl2 的相关配置，就不迁移过来了，有需要直接切过去看就是。
@@ -60,6 +62,8 @@ terminal 的相关配置文件在另一个 [taseikyo/oh-my-terminal](https://git
 ## typora
 
 今天（2021/03/29）才发现 typora 可以自定义快捷键，比我自己写的 sublime 扩展更方便、更精细（主要是不熟悉它那个类），比如可以区分代码和代码块，公式和内联公式。于是将熟悉的快捷键迁移过去了（Ctrl+1 - Ctrl+7），并加了对应的细化区分，具体配置看 "typora/conf.user.json"
+
+更新，我在 [sublime-markdown-helper](https://github.com/taseikyo/sublime-markdown-helper) 中加了类似的更精细的快捷键，所以还是不会用 typora 而是继续 sublime 2333
 
 ## vim
 

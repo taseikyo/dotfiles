@@ -1,0 +1,15 @@
+{
+    "font_face": "Microsoft Yahei mono",
+    "font_size": 12,
+    "default_line_ending": "unix",
+    "word_wrap": "true",
+    "translate_tabs_to_spaces": true,
+    "show_line_endings": true,
+    "show_encoding": true,
+    "save_on_focus_lost": true,
+    "bold_folder_labels": true,
+    "highlight_line": true,
+    "ensure_newline_at_eof_on_save": true,
+    "trim_trailing_white_space_on_save": true,
+    "draw_minimap_border": true,
+}
